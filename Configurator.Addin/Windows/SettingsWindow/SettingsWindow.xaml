@@ -1,0 +1,25 @@
+﻿<Window x:Class="Configurator.Addin.Windows.SettingsWindow.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:settingsWindow="clr-namespace:Configurator.Addin.Windows.SettingsWindow"
+        xmlns:controls="clr-namespace:Configurator.Addin.Windows.Common.Controls"
+        mc:Ignorable="d"
+        Title="Settings" Width="800" SizeToContent="Height"
+        WindowStartupLocation="CenterScreen"
+        x:ClassModifier="internal">
+    <Window.DataContext>
+        <settingsWindow:SettingsWindowViewModel/>
+    </Window.DataContext>
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Configurator.AddIn;component/Themes/Generic.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid Margin="10">
+        <controls:Heading Grid.Row="0" Grid.Column="0" Text="Custom property tools" ShowLine="False" />
+    </Grid>
+</Window>
